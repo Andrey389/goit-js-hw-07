@@ -17,4 +17,13 @@ body {
 ul, li  {
   list-style-type: none;
 }
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type:none;
+}
 
+.gallery li {
+  flex: 0 0 33.33%;
+  margin: 5px;
+}

@@ -14,12 +14,13 @@ const images = [
 ];
 
 const gallery = document.querySelector('.gallery');
-
-const imagesEl = images.map(img => {
-  const liEl = document.createElement('li');
-  liEl.classList.add('gallery-img');
-
-  return liEl;
-});
-
-console.log(imagesEl);
+gallery.innerHTML = createImges(images);
+function createImges(img) {
+  return img
+    .map(
+      ({ url, alt }) =>
+        `<li class="gallery-list"> 
+        <img src="${url}" alt="${alt}" class="gallery-list-img">`
+    )
+    .join('');
+}
