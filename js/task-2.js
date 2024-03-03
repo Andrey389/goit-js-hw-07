@@ -14,12 +14,12 @@ const images = [
 ];
 
 const gallery = document.querySelector('.gallery');
-gallery.innerHTML = createImges(images);
-function createImges(img) {
+gallery.innerHTML = createImages(images);
+function createImages(img) {
   return img
     .map(
       ({ url, alt }) =>
-        `<li class="gallery-list"> 
+        `<li class="gallery-item"> 
         <img src="${url}" alt="${alt}" class="gallery-list-img">`
     )
     .join('');
