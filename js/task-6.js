@@ -7,6 +7,7 @@ createBtn.addEventListener('click', createBoxes);
 destroyBtn.addEventListener('click', destroyBoxes);
 
 function createBoxes() {
+  boxesContainer.innerHTML = '';
   const amount = +input.value;
   if (amount < 1 || amount > 100) {
     alert('Please enter a number between 1 and 100.');

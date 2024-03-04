@@ -5,15 +5,14 @@ form.addEventListener('submit', handleSubmit);
 function handleSubmit(event) {
   event.preventDefault();
   const elements = event.currentTarget.elements;
-  if (!elements.email.value || !elements.password.value) {
+  if (!elements.email.value.trim() || !elements.password.value.trim()) {
     alert('All form fields must be filled in');
   } else {
     const info = {
-      email: elements.email.value,
-      password: elements.password.value,
+      email: elements.email.value.trim(),
+      password: elements.password.value.trim(),
     };
     console.log(info);
+    event.currentTarget.reset();
   }
-
-  event.currentTarget.reset();
 }
